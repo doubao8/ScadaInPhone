@@ -54,9 +54,14 @@ public class MainActivity extends ListActivity {
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
-
-		Intent intent = new Intent(MainActivity.this, SvgActivity.class);
-
+		
+		String info= (String) lstData.get(position).get("info");
+		Intent intent;
+		if(info.equals("GongYeDianShi")){
+			intent = new Intent(MainActivity.this, VideoActivity.class);
+		}else{
+			intent = new Intent(MainActivity.this, SvgActivity.class);
+		}
 		Bundle bundle = new Bundle();
 		bundle.putString("svg", (String) lstData.get(position).get("info"));
 		intent.putExtra("svgInfo", bundle);
@@ -117,6 +122,7 @@ public class MainActivity extends ListActivity {
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			ViewHolder holder = null;
+			
 			if (convertView == null) {
 
 				holder = new ViewHolder();

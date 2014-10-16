@@ -10,7 +10,7 @@
     tools:context=".LoginActivity" >
 
     <TextView
-        android:id="@+id/lblLoginUsername"
+        android:id="@+id/lblLoginUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -33,11 +33,11 @@
         android:id="@+id/txtLoginUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/lblLoginUsername"
-        android:layout_alignBottom="@+id/lblLoginUsername"
+        android:layout_alignBaseline="@id/lblLoginUserName"
+        android:layout_alignBottom="@id/lblLoginUserName"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/lblLoginUsername"
+        android:layout_toRightOf="@id/lblLoginUserName"
         android:ems="10"
         android:inputType="text" >
 

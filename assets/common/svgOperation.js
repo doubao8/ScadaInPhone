@@ -18,7 +18,7 @@ function createVarNode(name,content,link,pid,type,forGraphId){
     };
     return varNode;
 }
-//创建与SVG文件中hollysys:interactNode节点对应的内存节点
+//创建与SVG文件中hollysys:interactNode交互特性节点对应的内存节点
 function createInteractNode(name,forGraphId,param,script){
     var interactNode = {
         name : name,
@@ -81,7 +81,7 @@ function createAllInteract(){
     }
 }
 
-var allAnimate=new Array(); //所有动画点
+var allAnimate=new Array(); //所有动态特性点
 function getAllAnimate(){
     return  allAnimate;
 }
